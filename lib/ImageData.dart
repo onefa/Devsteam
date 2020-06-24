@@ -53,8 +53,8 @@ class User {
   String lastName;
 
   factory User.fromJson(Map<String, dynamic> json) => User(
-    name: json["name"],
-    firstName: json["first_name"],
+    name: json["name"] == null ? null : json["name"],
+    firstName: json["first_name"] == null ? null : json["first_name"],
     lastName: json["last_name"] == null ? null : json["last_name"],
   );
 
